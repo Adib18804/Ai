@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Join NexusAI Premium to unlock AI superpowers, master prompt engineering, and build automations." />
-    <meta name="keywords" content="AI, NexusAI, premium membership, prompt engineering, AI tools" />
+    <meta
+      name="description"
+      content="Join NexusAI Premium to unlock AI superpowers, master prompt engineering, and build automations."
+    />
+    <meta
+      name="keywords"
+      content="AI, NexusAI, premium membership, prompt engineering, AI tools"
+    />
     <meta name="theme-color" content="#6366f1" />
     <title>NexusAI Premium | Next-Gen Membership</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -17,39 +29,87 @@
     <div class="particles" id="particles-js" role="presentation"></div>
 
     <!-- Header -->
-    <header class="glass" role="banner">
+    <header class="navbar glass" role="banner">
       <div class="container">
         <div class="logo">
           <i class="fas fa-brain" aria-hidden="true"></i>
           <h1>Nexus<span>AI</span></h1>
         </div>
+
         <nav aria-label="Main navigation">
-          <ul>
-            <li><a href="#features"><i class="fas fa-star" aria-hidden="true"></i> Features</a></li>
-            <li><a href="#pricing"><i class="fas fa-tags" aria-hidden="true"></i> Pricing</a></li>
-            <li><a href="#community"><i class="fas fa-users" aria-hidden="true"></i> Community</a></li>
-            <li class="dropdown">
-              <button id="user-menu" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user-circle" aria-hidden="true"></i>
-                <span>Account</span>
-                <i class="fas fa-caret-down" aria-hidden="true"></i>
-              </button>
-              <div class="dropdown-content" role="menu">
-                <a href="#" role="menuitem"><i class="fas fa-user" aria-hidden="true"></i> Profile</a>
-                <a href="#" role="menuitem"><i class="fas fa-cog" aria-hidden="true"></i> Settings</a>
-                <a href="#" role="menuitem"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout</a>
-              </div>
+          <button
+            class="mobile-menu"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <span class="menu-icon"></span>
+          </button>
+
+          <ul class="nav-links">
+            <li>
+              <a href="#features" class="nav-link">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <span>Features</span>
+              </a>
             </li>
             <li>
-              <button id="theme-toggle" aria-label="Toggle theme">
+              <a href="#pricing" class="nav-link">
+                <i class="fas fa-tags" aria-hidden="true"></i>
+                <span>Pricing</span>
+              </a>
+            </li>
+            <li>
+              <a href="#community" class="nav-link">
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <span>Community</span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <button
+                id="user-menu"
+                class="dropdown-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="dropdown-menu"
+              >
+                <i class="fas fa-user-circle" aria-hidden="true"></i>
+                <span>Account</span>
+                <i
+                  class="fas fa-caret-down dropdown-arrow"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <ul class="dropdown-content" role="menu" id="dropdown-menu">
+                <li>
+                  <a href="#" role="menuitem">
+                    <i class="fas fa-user" aria-hidden="true"></i> Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="#" role="menuitem">
+                    <i class="fas fa-cog" aria-hidden="true"></i> Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="#" role="menuitem">
+                    <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button
+                id="theme-toggle"
+                class="theme-toggle"
+                aria-label="Toggle theme"
+              >
                 <i class="fas fa-moon" aria-hidden="true"></i>
+                <span class="visually-hidden">Toggle Dark Mode</span>
               </button>
             </li>
           </ul>
         </nav>
-        <button class="mobile-menu" aria-label="Toggle mobile menu">
-          <i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
       </div>
     </header>
 
@@ -57,95 +117,183 @@
     <main>
       <!-- Hero Section -->
       <section class="hero" id="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h2>
-        <span class="typewrite" data-text='["Unlock AI Superpowers","Master Prompt Engineering","Build AI Automations","Join the Future"]'></span>
-        <span class="cursor" aria-hidden="true">|</span>
-      </h2>
-      <p class="subtitle">Join 25,000+ professionals mastering AI with our premium content, tools, and community.</p>
-      <div class="cta-container">
-        <button class="cta-pulse" aria-label="Start Free Trial">
-          <i class="fas fa-rocket" aria-hidden="true"></i>
-          Start Free Trial
-        </button>
-        <div class="trust-badges">
-          <div class="badge">
-            <i class="fas fa-check-circle" aria-hidden="true"></i>
-            <span>7-Day Money Back</span>
+        <div class="container">
+          <div class="hero-content">
+            <h2>
+              <span
+                class="typewrite"
+                data-text='["Unlock AI Superpowers","Master Prompt Engineering","Build AI Automations","Join the Future"]'
+              ></span>
+              <span class="cursor" aria-hidden="true">|</span>
+            </h2>
+            <p class="subtitle">
+              Join 25,000+ professionals mastering AI with our premium content,
+              tools, and community.
+            </p>
+            <div class="cta-container">
+              <button class="cta-pulse" aria-label="Start Free Trial">
+                <i class="fas fa-rocket" aria-hidden="true"></i>
+                Start Free Trial
+              </button>
+              <div class="trust-badges">
+                <div class="badge">
+                  <i class="fas fa-check-circle" aria-hidden="true"></i>
+                  <span>7-Day Money Back</span>
+                </div>
+                <div class="badge">
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                  <span>Secure Payment</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="number" data-count="25341">25,341</div>
+                <div class="label">Active Members</div>
+              </div>
+              <div class="stat">
+                <div class="number" data-count="1278">1,278</div>
+                <div class="label">Premium Prompts</div>
+              </div>
+              <div class="stat">
+                <div class="number" data-count="94">94</div>
+                <div class="label">Expert Coaches</div>
+              </div>
+            </div>
           </div>
-          <div class="badge">
-            <i class="fas fa-shield-alt" aria-hidden="true"></i>
-            <span>Secure Payment</span>
+
+          <div class="hero-image" role="presentation" aria-hidden="true">
+            <!-- Card 1: AI Automations -->
+            <div class="floating-card card2">
+              <div class="card-inner">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3063/3063187.png"
+                  srcset="
+                    https://cdn-icons-png.flaticon.com/512/3063/3063187.png 1x,
+                    https://cdn-icons-png.flaticon.com/512/3063/3063187.png 2x
+                  "
+                  alt="AI Automations"
+                  loading="lazy"
+                  class="card-image"
+                />
+                <div class="card-overlay">
+                  <div class="overlay-content">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3063/3063187.png"
+                      alt="Automation Icon"
+                      class="overlay-icon"
+                      loading="lazy"
+                    />
+                    <h4>AI Automations</h4>
+                    <p>Streamline your workflows</p>
+                    <button class="overlay-button">
+                      See Automations
+                      <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-badge">TRENDING</div>
+              </div>
+            </div>
+
+            <!-- Card 2: AI Community -->
+            <div class="floating-card card3">
+              <div class="card-inner">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3573/3573730.png"
+                  srcset="
+                    https://cdn-icons-png.flaticon.com/512/3573/3573730.png 1x,
+                    https://cdn-icons-png.flaticon.com/512/3573/3573730.png 2x
+                  "
+                  alt="AI Community"
+                  loading="lazy"
+                  class="card-image"
+                />
+                <div class="card-overlay">
+                  <div class="overlay-content">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3573/3573730.png"
+                      alt="Community Icon"
+                      class="overlay-icon"
+                      loading="lazy"
+                    />
+                    <h4>AI Community</h4>
+                    <p>25,000+ members</p>
+                    <button class="overlay-button">
+                      Join Community
+                      <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="number" data-count="25341" aria-live="polite">0</div>
-          <div class="label">Active Members</div>
-        </div>
-        <div class="stat">
-          <div class="number" data-count="1278" aria-live="polite">0</div>
-          <div class="label">Premium Prompts</div>
-        </div>
-        <div class="stat">
-          <div class="number" data-count="94" aria-live="polite">0</div>
-          <div class="label">Expert Coaches</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-image" role="presentation">
-      <div class="floating-card card1">
-        <img
-          src="https://images.unsplash.com/photo-1650825556125-060e3d9ca491?w=150&h=150&fit=crop&auto=format"
-          alt="AI Prompt Example"
-          loading="lazy"
-        />
-        <div class="card-badge">NEW</div>
-      </div>
-      <div class="floating-card card2">
-        <img
-          src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=150&h=150&fit=crop&auto=format"
-          alt="AI Automation"
-          loading="lazy"
-        />
-        <div class="card-badge">TRENDING</div>
-      </div>
-      <div class="floating-card card3">
-        <img
-          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=150&h=150&fit=crop&auto=format"
-          alt="Community"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <!-- AI Personality Selector -->
       <section class="ai-personality" id="personality">
         <div class="container">
-          <h3><i class="fas fa-robot" aria-hidden="true"></i> Your AI Coach Personality</h3>
+          <h3>
+            <i class="fas fa-robot" aria-hidden="true"></i> Your AI Coach
+            Personality
+          </h3>
           <p>Customize how our AI assistant interacts with you.</p>
-          <div class="personality-grid" role="radiogroup" aria-label="AI Personality Selector">
-            <div class="personality-card active" data-personality="professional" role="radio" aria-checked="true" tabindex="0">
-              <div class="icon"><i class="fas fa-suitcase" aria-hidden="true"></i></div>
+          <div
+            class="personality-grid"
+            role="radiogroup"
+            aria-label="AI Personality Selector"
+          >
+            <div
+              class="personality-card active"
+              data-personality="professional"
+              role="radio"
+              aria-checked="true"
+              tabindex="0"
+            >
+              <div class="icon">
+                <i class="fas fa-suitcase" aria-hidden="true"></i>
+              </div>
               <h4>Professional</h4>
               <p>Formal, data-driven approach</p>
             </div>
-            <div class="personality-card" data-personality="friendly" role="radio" aria-checked="false" tabindex="-1">
-              <div class="icon"><i class="fas fa-smile" aria-hidden="true"></i></div>
+            <div
+              class="personality-card"
+              data-personality="friendly"
+              role="radio"
+              aria-checked="false"
+              tabindex="-1"
+            >
+              <div class="icon">
+                <i class="fas fa-smile" aria-hidden="true"></i>
+              </div>
               <h4>Friendly</h4>
               <p>Casual, encouraging tone</p>
             </div>
-            <div class="personality-card" data-personality="technical" role="radio" aria-checked="false" tabindex="-1">
-              <div class="icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+            <div
+              class="personality-card"
+              data-personality="technical"
+              role="radio"
+              aria-checked="false"
+              tabindex="-1"
+            >
+              <div class="icon">
+                <i class="fas fa-code" aria-hidden="true"></i>
+              </div>
               <h4>Technical</h4>
               <p>Detailed, code-focused</p>
             </div>
-            <div class="personality-card" data-personality="creative" role="radio" aria-checked="false" tabindex="-1">
-              <div class="icon"><i class="fas fa-paint-brush" aria-hidden="true"></i></div>
+            <div
+              class="personality-card"
+              data-personality="creative"
+              role="radio"
+              aria-checked="false"
+              tabindex="-1"
+            >
+              <div class="icon">
+                <i class="fas fa-paint-brush" aria-hidden="true"></i>
+              </div>
               <h4>Creative</h4>
               <p>Experimental, abstract</p>
             </div>
@@ -156,23 +304,77 @@
       <!-- Features Section -->
       <section id="features" class="features">
         <div class="container">
-          <h3><i class="fas fa-cubes" aria-hidden="true"></i> Membership Benefits</h3>
-          <div class="tabs" role="tablist" aria-label="Membership Benefits Tabs">
-            <button class="tab-btn active" data-tab="content" role="tab" aria-selected="true" aria-controls="content" id="tab-content">Premium Content</button>
-            <button class="tab-btn" data-tab="tools" role="tab" aria-selected="false" aria-controls="tools" id="tab-tools">AI Tools</button>
-            <button class="tab-btn" data-tab="community" role="tab" aria-selected="false" aria-controls="community" id="tab-community">Community</button>
-            <button class="tab-btn" data-tab="support" role="tab" aria-selected="false" aria-controls="support" id="tab-support">Live Support</button>
+          <h3>
+            <i class="fas fa-cubes" aria-hidden="true"></i> Membership Benefits
+          </h3>
+          <div
+            class="tabs"
+            role="tablist"
+            aria-label="Membership Benefits Tabs"
+          >
+            <button
+              class="tab-btn active"
+              data-tab="content"
+              role="tab"
+              aria-selected="true"
+              aria-controls="content"
+              id="tab-content"
+            >
+              Premium Content
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="tools"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tools"
+              id="tab-tools"
+            >
+              AI Tools
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="community"
+              role="tab"
+              aria-selected="false"
+              aria-controls="community"
+              id="tab-community"
+            >
+              Community
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="support"
+              role="tab"
+              aria-selected="false"
+              aria-controls="support"
+              id="tab-support"
+            >
+              Live Support
+            </button>
           </div>
-          <div class="tab-content active" id="content" role="tabpanel" aria-labelledby="tab-content">
+          <div
+            class="tab-content active"
+            id="content"
+            role="tabpanel"
+            aria-labelledby="tab-content"
+          >
             <div class="feature-grid">
               <div class="feature-card">
-                <div class="feature-icon pulse"><i class="fas fa-video" aria-hidden="true"></i></div>
+                <div class="feature-icon pulse">
+                  <i class="fas fa-video" aria-hidden="true"></i>
+                </div>
                 <h4>Weekly Masterclasses</h4>
-                <p>Live sessions with AI experts covering cutting-edge applications.</p>
+                <p>
+                  Live sessions with AI experts covering cutting-edge
+                  applications.
+                </p>
                 <div class="feature-badge">New Every Tuesday</div>
               </div>
               <div class="feature-card">
-                <div class="feature-icon pulse"><i class="fas fa-book" aria-hidden="true"></i></div>
+                <div class="feature-icon pulse">
+                  <i class="fas fa-book" aria-hidden="true"></i>
+                </div>
                 <h4>Prompt Library</h4>
                 <p>1,000+ proven prompts for ChatGPT, Midjourney, and more.</p>
                 <div class="feature-progress">
@@ -181,20 +383,37 @@
                 </div>
               </div>
               <div class="feature-card">
-                <div class="feature-icon pulse"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
+                <div class="feature-icon pulse">
+                  <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                </div>
                 <h4>Automation Templates</h4>
                 <p>Ready-to-use Zapier/Make.com workflows for business.</p>
                 <div class="feature-badge">23 New This Month</div>
               </div>
             </div>
           </div>
-          <div class="tab-content" id="tools" role="tabpanel" aria-labelledby="tab-tools">
+          <div
+            class="tab-content"
+            id="tools"
+            role="tabpanel"
+            aria-labelledby="tab-tools"
+          >
             <p>Access cutting-edge AI tools to streamline your workflows.</p>
           </div>
-          <div class="tab-content" id="community" role="tabpanel" aria-labelledby="tab-community">
+          <div
+            class="tab-content"
+            id="community"
+            role="tabpanel"
+            aria-labelledby="tab-community"
+          >
             <p>Join a vibrant community of AI enthusiasts and experts.</p>
           </div>
-          <div class="tab-content" id="support" role="tabpanel" aria-labelledby="tab-support">
+          <div
+            class="tab-content"
+            id="support"
+            role="tabpanel"
+            aria-labelledby="tab-support"
+          >
             <p>Get 24/7 live support from our AI experts.</p>
           </div>
         </div>
@@ -203,7 +422,9 @@
       <!-- Pricing Section -->
       <section id="pricing" class="pricing">
         <div class="container">
-          <h3><i class="fas fa-tags" aria-hidden="true"></i> Choose Your Plan</h3>
+          <h3>
+            <i class="fas fa-tags" aria-hidden="true"></i> Choose Your Plan
+          </h3>
           <p>Start with a 7-day free trial. Cancel anytime.</p>
           <div class="pricing-grid">
             <div class="pricing-card">
@@ -212,17 +433,37 @@
                   <h4>Starter</h4>
                   <div class="price">$19<span>/month</span></div>
                   <ul>
-                    <li><i class="fas fa-check" aria-hidden="true"></i> Basic Prompt Library</li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i> Weekly Webinars</li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i> Community Access</li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i> Automation Templates</li>
-                    <li><i class="fas fa-times" aria-hidden="true"></i> 1:1 Coaching</li>
+                    <li>
+                      <i class="fas fa-check" aria-hidden="true"></i> Basic
+                      Prompt Library
+                    </li>
+                    <li>
+                      <i class="fas fa-check" aria-hidden="true"></i> Weekly
+                      Webinars
+                    </li>
+                    <li>
+                      <i class="fas fa-check" aria-hidden="true"></i> Community
+                      Access
+                    </li>
+                    <li>
+                      <i class="fas fa-times" aria-hidden="true"></i> Automation
+                      Templates
+                    </li>
+                    <li>
+                      <i class="fas fa-times" aria-hidden="true"></i> 1:1
+                      Coaching
+                    </li>
                   </ul>
-                  <button class="select-btn" aria-label="Select Starter Plan">Get Started</button>
+                  <button class="select-btn" aria-label="Select Starter Plan">
+                    Get Started
+                  </button>
                 </div>
                 <div class="pricing-card-back">
                   <h4>Best For Beginners</h4>
-                  <p>Perfect if you're just starting with AI and want quality resources.</p>
+                  <p>
+                    Perfect if you're just starting with AI and want quality
+                    resources.
+                  </p>
                   <div class="back-features">
                     <div class="feature">
                       <i class="fas fa-database" aria-hidden="true"></i>
@@ -236,7 +477,6 @@
                 </div>
               </div>
             </div>
-            <!-- Additional pricing cards can be added here -->
           </div>
         </div>
       </section>
@@ -245,7 +485,9 @@
     <!-- AI Chatbot Widget -->
     <div class="ai-chatbot" aria-live="polite">
       <div class="chatbot-header">
-        <div class="chatbot-avatar"><i class="fas fa-robot" aria-hidden="true"></i></div>
+        <div class="chatbot-avatar">
+          <i class="fas fa-robot" aria-hidden="true"></i>
+        </div>
         <div class="chatbot-info">
           <h5>NexusAI Assistant</h5>
           <div class="status online">Online</div>
@@ -256,13 +498,22 @@
       </div>
       <div class="chatbot-messages">
         <div class="message bot">
-          <div class="message-content">Hi there! I'm your AI coach. How can I help you today?</div>
+          <div class="message-content">
+            Hi there! I'm your AI coach. How can I help you today?
+          </div>
           <div class="message-time">Just now</div>
         </div>
       </div>
       <form class="chatbot-input" role="search">
-        <label for="chatbot-input" class="visually-hidden">Ask the AI assistant</label>
-        <input id="chatbot-input" type="text" placeholder="Ask me anything about AI..." autocomplete="off" />
+        <label for="chatbot-input" class="visually-hidden"
+          >Ask the AI assistant</label
+        >
+        <input
+          id="chatbot-input"
+          type="text"
+          placeholder="Ask me anything about AI..."
+          autocomplete="off"
+        />
         <button type="submit" class="send-btn" aria-label="Send message">
           <i class="fas fa-paper-plane" aria-hidden="true"></i>
         </button>
@@ -282,7 +533,9 @@
       </div>
       <div class="notification-list">
         <div class="notification unread">
-          <div class="notification-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+          <div class="notification-icon">
+            <i class="fas fa-video" aria-hidden="true"></i>
+          </div>
           <div class="notification-content">
             <strong>New Masterclass Added</strong>
             <p>"Advanced Prompt Chaining" is now available.</p>
@@ -310,7 +563,10 @@
       </div>
     </footer>
 
-    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+    ></script>
     <script defer src="script.js"></script>
   </body>
 </html>
